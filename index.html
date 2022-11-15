@@ -43,6 +43,14 @@
         background: black;
       }
     </style>
+        <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.138.0/build/three.module.js",
+                "OrbitControls": "https://unpkg.com/three@0.138.0/examples/jsm/loaders/FontLoader.js"
+            }
+        }
+    </script>
     <title>404</title>
   </head>
   <body>
@@ -51,9 +59,9 @@
       <button id="start">PLAY</button>
     </div>
     <video src="no ones around to help.mp4" id="v" loop></video>
-    <script type="module" src="/e/three/build/three.min.js"></script>
-    <script type="module" src="/e/three/examples/jsm/loaders/FontLoader.js"></script>
     <script type="module">
+      import * as THREE from 'three';
+      import { FontLoader } from 'three/addons/loaders/FontLoader.js';
       //https://threejs.org/examples/#webgl_materials_video
       document.getElementById("start").addEventListener("click", function(){
         init();
