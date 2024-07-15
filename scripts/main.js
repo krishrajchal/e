@@ -15,7 +15,7 @@ async function download(){
 
     const youtube = new Innertube();
     
-    const stream = youtube.download(videoID, {
+    const stream = youtube.download("lTieq1DrEec", {
       format: 'mp4', // Optional, defaults to mp4 and I recommend to leave it as it is unless you know what you're doing
       quality: '360p', // if a video doesn't have a specific quality it'll fall back to 360p, also ignored when type is set to audio
       type: 'videoandaudio' // can be “video”, “audio” and “videoandaudio”
